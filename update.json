@@ -1,0 +1,22 @@
+{
+  "versionCode": 1,
+  "versionName": "0.1.0",
+  "notes": "SnapGrab-এর প্রথম প্রকাশ।",
+  "apks": {
+    "arm64-v8a": {
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.1.0/app-arm64-v8a-release.apk",
+      "sha256": "ddc9c63f94bf1f9c2bf5efb9a05f8e9e3281d77534abe823dace5cfa3db429a1",
+      "sizeBytes": 73144830
+    },
+    "armeabi-v7a": {
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.1.0/app-armeabi-v7a-release.apk",
+      "sha256": "cad9168d07f10d303e7da1c85de9744b3d90f936f570a285e73fa15485fe1ad7",
+      "sizeBytes": 65986076
+    },
+    "x86_64": {
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.1.0/app-x86_64-release.apk",
+      "sha256": "be541409893ffbb9132b8c7e303b84d4f985370fb564bfece3e03c1752653e0b",
+      "sizeBytes": 76158611
+    }
+  }
+}
