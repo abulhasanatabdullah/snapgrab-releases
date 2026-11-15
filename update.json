@@ -1,22 +1,22 @@
 {
-  "versionCode": 2,
-  "versionName": "0.1.1",
-  "notes": "Facebook গ্রুপের পোস্ট বা শেয়ার লিংক থেকে ডাউনলোড করলে এখন আসল ভিডিওটাই নামে, সাথে ঠিক শিরোনাম।",
+  "versionCode": 3,
+  "versionName": "0.2.0",
+  "notes": "নতুন: প্লে স্টোরের মতো ১–৫ স্টার দিয়ে মতামত, ব্যর্থ ডাউনলোডে \"সমস্যা জানান\", আর অ্যাপ বন্ধ হলে রিপোর্ট পাঠানোর সুযোগ।",
   "apks": {
     "arm64-v8a": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.1.1/app-arm64-v8a-release.apk",
-      "sha256": "a8d3807a5179ad9e17a754119cdb4495b8ce9e487ca15cca54339d4b2a6cbef1",
-      "sizeBytes": 73149030
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.0/app-arm64-v8a-release.apk",
+      "sha256": "000b259910c14e22a29e7e6b1858b6bb90a5f25e45e03bb44a318479622a3698",
+      "sizeBytes": 73178782
     },
     "armeabi-v7a": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.1.1/app-armeabi-v7a-release.apk",
-      "sha256": "9a4a255ed2dfdd97f765cdbd5be9961eba49b2f92359033469c93b4f83bd5249",
-      "sizeBytes": 65990276
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.0/app-armeabi-v7a-release.apk",
+      "sha256": "f670b355dde64e789f8328493f5332ea247f2bbd82c857fc3823502ec0d33ad4",
+      "sizeBytes": 66020028
     },
     "x86_64": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.1.1/app-x86_64-release.apk",
-      "sha256": "680c628a5d8e27fd22c615e1c8327aa009e190066340b339beaef1bdc75e0ee4",
-      "sizeBytes": 76162811
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.0/app-x86_64-release.apk",
+      "sha256": "263e101bc867a742d616b301e22ca6dc225714cf163c54b35f866803896f4500",
+      "sizeBytes": 76192563
     }
   }
 }
