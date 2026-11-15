@@ -8,7 +8,7 @@ YouTube, Facebook, Instagram, TikTok আর X থেকে ভিডিও আ�
 
 ### 👉 [abulhasanatabdullah.github.io/snapgrab-releases](https://abulhasanatabdullah.github.io/snapgrab-releases/)
 
-পেজটা খুলে **ডাউনলোড করুন** বোতামে চাপ দিন। ওই একটা ফাইলই (`SnapGrab.apk`) যথেষ্ট, বাকি ফাইলগুলো নামানোর দরকার নেই।
+পেজটা খুলে **ডাউনলোড করুন** বোতামে চাপ দিন।
 
 সরাসরি লিংক, যা সবসময় সর্বশেষ ভার্সন দেয়:
 https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab.apk
