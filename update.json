@@ -1,22 +1,22 @@
 {
-  "versionCode": 3,
-  "versionName": "0.2.0",
-  "notes": "নতুন: প্লে স্টোরের মতো ১–৫ স্টার দিয়ে মতামত, ব্যর্থ ডাউনলোডে \"সমস্যা জানান\", আর অ্যাপ বন্ধ হলে রিপোর্ট পাঠানোর সুযোগ।",
+  "versionCode": 4,
+  "versionName": "0.2.1",
+  "notes": "কতজন অ্যাপ ব্যবহার করছেন তা গোনা (সেটিংস থেকে বন্ধ করা যায়)।",
   "apks": {
     "arm64-v8a": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.0/SnapGrab.apk",
-      "sha256": "000b259910c14e22a29e7e6b1858b6bb90a5f25e45e03bb44a318479622a3698",
-      "sizeBytes": 73178782
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.1/SnapGrab.apk",
+      "sha256": "849ee9b2d3f0e8e5871e4e87f5ea1f00f3310acb9ba2252e5932bf9bbd54ee3e",
+      "sizeBytes": 73184754
     },
     "armeabi-v7a": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.0/SnapGrab-purono-phone-32bit.apk",
-      "sha256": "f670b355dde64e789f8328493f5332ea247f2bbd82c857fc3823502ec0d33ad4",
-      "sizeBytes": 66020028
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.1/SnapGrab-purono-phone-32bit.apk",
+      "sha256": "1bd81328065609e1071070a1847b1ac585772a61a62ac11d7622478177f4ecae",
+      "sizeBytes": 66026000
     },
     "x86_64": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.0/SnapGrab-emulator-x86_64.apk",
-      "sha256": "263e101bc867a742d616b301e22ca6dc225714cf163c54b35f866803896f4500",
-      "sizeBytes": 76192563
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.2.1/SnapGrab-emulator-x86_64.apk",
+      "sha256": "a0549b1329522c431221047b923a237700e85b8de7ac7d98d9b4a731a2695c56",
+      "sizeBytes": 76198531
     }
   }
 }
