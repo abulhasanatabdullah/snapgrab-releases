@@ -97,6 +97,18 @@
     font-size: 12px; word-break: break-all;
     background: var(--bg); padding: 2px 6px; border-radius: 6px;
   }
+  .warn {
+    border-left: 4px solid var(--iris);
+  }
+  .warn p { margin: 0 0 10px; }
+  .warn p:last-child { margin-bottom: 0; }
+  .muted { color: var(--muted); font-size: 16px; }
+  .files { width: 100%; border-collapse: collapse; font-size: 16px; }
+  .files td { padding: 10px 0; border-top: 1px solid var(--line); vertical-align: top; }
+  .files tr:first-child td { border-top: 0; }
+  .files .size { text-align: right; white-space: nowrap; color: var(--muted); padding-left: 12px; }
+  .files .who { color: var(--muted); font-size: 15px; }
+  .files .sha { display: block; margin-top: 6px; }
   footer { text-align: center; color: var(--muted); font-size: 15px; }
   footer a { color: var(--iris); }
 </style>
@@ -127,15 +139,46 @@
       </ol>
     </section>
 
+    <section class="card warn">
+      <h2>Google সতর্ক করলে কী করবেন</h2>
+      <p>অ্যাপটা Play Store-এ নেই বলে Google Play Protect একে "অচেনা অ্যাপ" বলে সতর্ক করতে পারে। এর মানে এই না যে অ্যাপে ভাইরাস আছে। Google শুধু বলছে, এটা তারা যাচাই করেনি।</p>
+      <p>সতর্কতা এলে <b>"আরো বিস্তারিত"</b> (More details) চাপুন, তারপর <b>"তবুও ইনস্টল করুন"</b> (Install anyway)।</p>
+      <p class="muted">ফাইল খোলার অনুমতি Chrome বা ফাইল ম্যানেজারকে একবারই দিতে হয়। চাইলে অ্যাপ বসানোর পরে অনুমতিটা আবার বন্ধ করে দিতে পারেন।</p>
+    </section>
+
     <section class="card">
-      <details>
-        <summary>বোতামের ফাইল install না হলে (পুরনো ফোন)</summary>
-        <p>খুব পুরনো কিছু ফোনে (সাধারণত ২০১৭-এর আগের) "অ্যাপটি install হয়নি" দেখাতে পারে। তখন এটা নিন:</p>
-        <ul>
-          <li><a href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab-purono-phone-32bit.apk">পুরনো ফোনের জন্য (৩২-বিট)</a></li>
-          <li><a href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab-emulator-x86_64.apk">কম্পিউটারের এমুলেটর বা Chromebook-এর জন্য</a></li>
-        </ul>
-      </details>
+      <h2>সব ফাইল</h2>
+      <table class="files">
+        <tr>
+          <td>
+            <a id="apk-arm64-v8a" href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab.apk">SnapGrab.apk</a>
+            <div class="who">প্রায় সব ফোনের জন্য</div>
+            <code class="sha" id="sha-arm64-v8a" hidden></code>
+          </td>
+          <td class="size" id="size-arm64-v8a"></td>
+        </tr>
+        <tr>
+          <td>
+            <a id="apk-armeabi-v7a" href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab-purono-phone-32bit.apk">SnapGrab-purono-phone-32bit.apk</a>
+            <div class="who">খুব পুরনো (৩২-বিট) ফোন, যদি উপরেরটা install না হয়</div>
+            <code class="sha" id="sha-armeabi-v7a" hidden></code>
+          </td>
+          <td class="size" id="size-armeabi-v7a"></td>
+        </tr>
+        <tr>
+          <td>
+            <a id="apk-x86_64" href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab-emulator-x86_64.apk">SnapGrab-emulator-x86_64.apk</a>
+            <div class="who">কম্পিউটারের এমুলেটর বা Chromebook</div>
+            <code class="sha" id="sha-x86_64" hidden></code>
+          </td>
+          <td class="size" id="size-x86_64"></td>
+        </tr>
+      </table>
+      <p class="muted" id="sha-note">প্রতিটা ফাইলের আকার আর SHA-256 <a href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest">release পাতায়</a> দেওয়া আছে।</p>
+    </section>
+
+    <section class="card">
+      <h2>প্রশ্ন ও উত্তর</h2>
       <details>
         <summary>এটা কি নিরাপদ?</summary>
         <p>প্রতিটা ভার্সন একই চাবি দিয়ে সই করা, যাতে কেউ বদলে দিলে ধরা পড়ে। সেই চাবির SHA-256 ছাপ:</p>
@@ -146,6 +189,20 @@
         <summary>এটা Play Store-এ নেই কেন?</summary>
         <p>Play Store ভিডিও ডাউনলোডের অ্যাপ রাখে না। তাই অ্যাপটা সরাসরি এখান থেকে দেওয়া হয়, আর অ্যাপ নিজেই নতুন ভার্সনের খবর দেয়।</p>
       </details>
+      <details>
+        <summary>"অ্যাপটি install হয়নি" দেখাচ্ছে (পুরনো ফোন)</summary>
+        <p>আপনার ফোন সম্ভবত পুরনো ৩২-বিট ফোন (সাধারণত ২০১৭-এর আগের)। উপরের "সব ফাইল" থেকে <a href="https://github.com/abulhasanatabdullah/snapgrab-releases/releases/latest/download/SnapGrab-purono-phone-32bit.apk">পুরনো ফোনের ফাইলটা</a> নিন।</p>
+      </details>
+      <details>
+        <summary>কোন ফোনে চলবে?</summary>
+        <p>Android ৮ বা তার পরের যেকোনো ফোনে।</p>
+      </details>
+      <details>
+        <summary>অ্যাপের ভাষা বাংলা করব কীভাবে?</summary>
+        <p>অ্যাপ ফোনের ভাষা অনুসরণ করে, তাই ফোন ইংরেজিতে থাকলে অ্যাপও ইংরেজিতে খোলে।</p>
+        <p>Android ১৩ বা তার পরের ফোনে: অ্যাপের সেটিংসে (হোমের ডানদিকের গিয়ার) <b>চেহারা</b> অংশে <b>ভাষা</b> চাপুন, তারপর বাংলা বেছে নিন।</p>
+        <p>এর আগের ফোনে: ফোনের Settings থেকে ফোনের ভাষা বাংলা করলে অ্যাপও বাংলায় খুলবে।</p>
+      </details>
     </section>
 
     <footer>
@@ -154,22 +211,47 @@
   </main>
 
 <script>
-  // The version and size of the newest release, so the page never has to be edited
-  // for a release. If GitHub cannot be reached the static text simply stays.
+  // Everything that changes with a release comes from update.json, the same file the
+  // app reads for its own updates, so the page never has to be edited for a release.
+  // Without JavaScript (or if it cannot be read) the static "latest" links still work.
   (function () {
-    var meta = document.getElementById("meta");
     var digits = function (s) {
       return String(s).replace(/[0-9]/g, function (d) { return "০১২৩৪৫৬৭৮৯"[d]; });
     };
-    fetch("https://api.github.com/repos/abulhasanatabdullah/snapgrab-releases/releases/latest")
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (rel) {
-        if (!rel || !rel.tag_name) return;
-        var apk = (rel.assets || []).filter(function (a) { return a.name === "SnapGrab.apk"; })[0];
-        var parts = ["ভার্সন " + digits(rel.tag_name.replace(/^v/, ""))];
-        if (apk) parts.push(digits(Math.round(apk.size / 1048576)) + " MB");
+    var mb = function (bytes) { return digits(Math.round(bytes / 1048576)) + " MB"; };
+    var load = function (url) {
+      return fetch(url, { cache: "no-cache" }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      });
+    };
+    load("update.json")
+      .catch(function () {
+        return load("https://raw.githubusercontent.com/abulhasanatabdullah/snapgrab-releases/main/update.json");
+      })
+      .then(function (m) {
+        if (!m || !m.versionName || !m.apks) return;
+        var main = m.apks["arm64-v8a"];
+        var parts = ["সর্বশেষ ভার্সন " + digits(m.versionName)];
+        if (main && main.sizeBytes) parts.push(mb(main.sizeBytes));
         parts.push("Android ৮ বা তার পরের ফোনে চলে");
-        meta.textContent = parts.join(" · ");
+        document.getElementById("meta").textContent = parts.join(" · ");
+
+        ["arm64-v8a", "armeabi-v7a", "x86_64"].forEach(function (abi) {
+          var e = m.apks[abi];
+          // Only this repo's own release files; anything else in the manifest is ignored.
+          if (!e || (e.url || "").indexOf("https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/") !== 0) return;
+          // The exact file whose SHA-256 is shown, not merely "the latest".
+          document.getElementById("apk-" + abi).href = e.url;
+          if (abi === "arm64-v8a") document.getElementById("download").href = e.url;
+          if (e.sizeBytes) document.getElementById("size-" + abi).textContent = mb(e.sizeBytes);
+          if (/^[0-9a-f]{64}$/.test(e.sha256 || "")) {
+            var sha = document.getElementById("sha-" + abi);
+            sha.textContent = "SHA-256: " + e.sha256;
+            sha.hidden = false;
+          }
+        });
+        document.getElementById("sha-note").hidden = true;
       })
       .catch(function () {});
   })();
