@@ -1,22 +1,22 @@
 {
-  "versionCode": 5,
-  "versionName": "0.3.0",
-  "notes": "রাতের ডেটায় নির্দিষ্ট সময়ে ডাউনলোড, quality-র পাশে MB আর খালি জায়গা, ভিডিও থেকে MP3, SD কার্ডে সেভ, Quick Settings বোতাম, নতুন লোগো, আর অ্যাপ প্রায় ৫ MB ছোট।",
+  "versionCode": 6,
+  "versionName": "0.3.1",
+  "notes": "নতুন সংস্করণ এলে এখন অ্যাপের ভেতরেই জানিয়ে দেবে, এক ছোঁয়ায় আপডেট।",
   "apks": {
     "arm64-v8a": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.3.0/SnapGrab.apk",
-      "sha256": "1da8c92dbe1e4df7f58a219513fa81d2c6d3acc7c06dd4fe92a06f0dba3be902",
-      "sizeBytes": 68159110
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.3.1/SnapGrab.apk",
+      "sha256": "0a79370e9728bb0a479be1bf0d0f2a21e406ff50dce39013bfba461880dd9add",
+      "sizeBytes": 68180418
     },
     "armeabi-v7a": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.3.0/SnapGrab-purono-phone-32bit.apk",
-      "sha256": "7d9349b97ee356c45a2ffb0c1904add5de20ff1da6a91921fa23006e3e7f2173",
-      "sizeBytes": 61515968
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.3.1/SnapGrab-purono-phone-32bit.apk",
+      "sha256": "1f7c95f99f308635f2f620806bffd56332d8554bd2b16361bdd9b158d5b76dab",
+      "sizeBytes": 61537276
     },
     "x86_64": {
-      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.3.0/SnapGrab-emulator-x86_64.apk",
-      "sha256": "4836e777db64702d3a51183d134e8af7989adc1f0c8120cb472f15d8c60c7e01",
-      "sizeBytes": 71157809
+      "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.3.1/SnapGrab-emulator-x86_64.apk",
+      "sha256": "e9e1df6e010f91f0890d1c78b8e6a1239377789028b60303fc0c4ed662a8d768",
+      "sizeBytes": 71179117
     }
   }
 }
