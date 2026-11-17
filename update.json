@@ -1,7 +1,7 @@
 {
   "versionCode": 7,
   "versionName": "0.4.0",
-  "notes": "নতুন রঙে নতুন চেহারা, আর ব্রাউজে সাজেশন, ট্যাব ও কণ্ঠে খোঁজা।",
+  "notes": "নতুন ডিজাইন, আর ব্রাউজে সাজেশন, একাধিক ট্যাব ও ভয়েস সার্চ।",
   "apks": {
     "arm64-v8a": {
       "url": "https://github.com/abulhasanatabdullah/snapgrab-releases/releases/download/v0.4.0/SnapGrab.apk",
