@@ -106,9 +106,28 @@
   .files { width: 100%; border-collapse: collapse; font-size: 16px; }
   .files td { padding: 10px 0; border-top: 1px solid var(--line); vertical-align: top; }
   .files tr:first-child td { border-top: 0; }
+  .files a { color: var(--iris); }
   .files .size { text-align: right; white-space: nowrap; color: var(--muted); padding-left: 12px; }
   .files .who { color: var(--muted); font-size: 15px; }
   .files .sha { display: block; margin-top: 6px; }
+  .proof { margin: 0 0 18px; }
+  .proof:last-child { margin-bottom: 0; }
+  .proof h3 { font-size: 17px; margin: 0 0 8px; display: flex; gap: 8px; align-items: flex-start; }
+  .proof h3 svg { width: 22px; height: 22px; flex: none; margin-top: 3px; color: #1FA36B; }
+  .shot { display: block; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #14172B; }
+  .shot img { display: block; width: 100%; height: auto; }
+  .shot.phone { max-width: 220px; }
+  .proof .muted { margin: 6px 0 0; font-size: 14px; }
+  .check-link {
+    display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
+    color: var(--iris); font-weight: 600; text-decoration: none;
+  }
+  .check-link svg { width: 18px; height: 18px; }
+  dialog.zoom { padding: 0; border: 0; border-radius: 12px; background: #14172B; max-width: 96vw; max-height: 92vh; overflow: auto; }
+  dialog.zoom::backdrop { background: rgba(8, 9, 18, 0.85); }
+  /* At its own size, so the small print can be read; a phone scrolls it sideways. */
+  dialog.zoom img { display: block; max-width: none; }
+  @media (min-width: 900px) { dialog.zoom img { max-width: 92vw; max-height: 90vh; } }
   footer { text-align: center; color: var(--muted); font-size: 15px; }
   footer a { color: var(--iris); }
 </style>
@@ -144,6 +163,27 @@
       <p>অ্যাপটা Play Store-এ নেই বলে Google Play Protect একে "অচেনা অ্যাপ" বলে সতর্ক করতে পারে। এর মানে এই না যে অ্যাপে ভাইরাস আছে। Google শুধু বলছে, এটা তারা যাচাই করেনি।</p>
       <p>সতর্কতা এলে <b>"আরো বিস্তারিত"</b> (More details) চাপুন, তারপর <b>"তবুও ইনস্টল করুন"</b> (Install anyway)।</p>
       <p class="muted">ফাইল খোলার অনুমতি Chrome বা ফাইল ম্যানেজারকে একবারই দিতে হয়। চাইলে অ্যাপ বসানোর পরে অনুমতিটা আবার বন্ধ করে দিতে পারেন।</p>
+    </section>
+
+    <section class="card">
+      <h2>নিরাপদ কি না, নিজে মিলিয়ে দেখুন</h2>
+      <div class="proof">
+        <h3><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.6-4.6 1.4 1.4-6 6z"/></svg>VirusTotal-এ ৬৩টা অ্যান্টিভাইরাসের কেউ কোনো সমস্যা পায়নি</h3>
+        <a class="shot" href="img/virustotal-0.4.0.webp" data-zoom>
+          <img src="img/virustotal-0.4.0.webp" width="1100" height="328" loading="lazy" alt="VirusTotal: SnapGrab.apk, ৬৩টার মধ্যে ০টা অ্যান্টিভাইরাস সমস্যা পেয়েছে">
+        </a>
+        <p class="muted">ছবিটা v০.৪.০-এর; সর্বশেষ ফল লিংকে।</p>
+        <a class="check-link" id="virustotal" href="https://www.virustotal.com/gui/file/59bedd959711cc51d8ada6e5517930e6db6812a1f5e6a9efa8a88bb13abee313" rel="noopener">
+          VirusTotal-এ নিজে দেখুন
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3v2h3.6l-9.8 9.8 1.4 1.4L19 6.4V10h2V3h-7zM19 19H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/></svg>
+        </a>
+      </div>
+      <div class="proof">
+        <h3><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.6-4.6 1.4 1.4-6 6z"/></svg>Google Play Protect পরীক্ষায় কোনো ক্ষতিকর অ্যাপ পায়নি</h3>
+        <a class="shot phone" href="img/play-protect.webp" data-zoom>
+          <img src="img/play-protect.webp" width="540" height="515" loading="lazy" alt="Play Protect: No harmful apps found">
+        </a>
+      </div>
     </section>
 
     <section class="card">
@@ -252,8 +292,30 @@
           }
         });
         document.getElementById("sha-note").hidden = true;
+        // The latest file's own VirusTotal page, by its SHA-256.
+        if (main && /^[0-9a-f]{64}$/.test(main.sha256 || "")) {
+          document.getElementById("virustotal").href = "https://www.virustotal.com/gui/file/" + main.sha256;
+        }
       })
       .catch(function () {});
+
+    // A tapped screenshot opens large over the page; without <dialog> the link opens the image.
+    var zoom = document.createElement("dialog");
+    if (typeof zoom.showModal !== "function") return;
+    zoom.className = "zoom";
+    var big = document.createElement("img");
+    zoom.appendChild(big);
+    zoom.addEventListener("click", function () { zoom.close(); });
+    document.body.appendChild(zoom);
+    Array.prototype.forEach.call(document.querySelectorAll("[data-zoom]"), function (a) {
+      a.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var img = a.querySelector("img");
+        big.src = a.href;
+        big.alt = img ? img.alt : "";
+        zoom.showModal();
+      });
+    });
   })();
 </script>
 </body>
