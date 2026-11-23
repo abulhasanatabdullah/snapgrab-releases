@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SnapGrab ডাউনলোড</title>
 <meta name="description" content="SnapGrab: YouTube, Facebook, Instagram, TikTok আর X থেকে ভিডিও ও অডিও ডাউনলোডের Android অ্যাপ।">
-<meta name="theme-color" content="#14172B">
+<meta name="theme-color" content="#3A66F0">
 <link rel="canonical" href="https://abulhasanatabdullah.github.io/snapgrab-releases/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SnapGrab">
@@ -23,10 +23,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&family=Plus+Jakarta+Sans:wght@600;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #14172B;
-    --volt: #C8F65A;
-    --iris: #5B4BEA;
-    --bg: #F5F6FA;
+    --ink: #14213D;
+    --volt: #D9FF7A;
+    --iris: #2F62E6;
+    --bg: #F3F7FC;
     --card: #FFFFFF;
     --text: #14172B;
     --muted: #5B6078;
@@ -34,12 +34,12 @@
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #0E1020;
-      --card: #171A2E;
+      --bg: #0A1430;
+      --card: #13214A;
       --text: #EEF0FA;
       --muted: #A3A8C3;
-      --line: #2E3352;
-      --iris: #9C92FF;
+      --line: #22356B;
+      --iris: #8EC2FF;
     }
   }
   * { box-sizing: border-box; }
@@ -52,34 +52,35 @@
     line-height: 1.6;
   }
   .hero {
-    background: var(--ink);
-    color: #EEF0FA;
+    background: linear-gradient(135deg, #3A66F0 0%, #2C86EA 55%, #22B8B2 100%);
+    color: #FFFFFF;
     padding: 40px 16px 48px;
     border-radius: 0 0 32px 32px;
     text-align: center;
   }
-  .mark {
-    width: 64px; height: 64px; margin: 0 auto 12px;
-    background: var(--volt); border-radius: 18px;
-    display: grid; place-items: center;
+  @media (prefers-color-scheme: dark) {
+    .hero { background: linear-gradient(135deg, #2F55D9 0%, #1E86E0 55%, #18A9A4 100%); }
   }
-  .mark svg { width: 36px; height: 36px; }
+  .mark {
+    width: 72px; height: 72px; margin: 0 auto 12px; display: block;
+    border-radius: 18px; box-shadow: 0 0 0 2px rgba(255,255,255,.35);
+  }
   h1 {
     font-family: "Plus Jakarta Sans", sans-serif;
     font-weight: 800; font-size: 34px; margin: 0;
   }
-  .tagline { color: #A3A8C3; margin: 4px 0 28px; }
+  .tagline { color: #F2F7FF; margin: 4px 0 28px; }
   .download {
-    display: flex; align-items: center; justify-content: center; gap: 12px;
-    width: 100%; max-width: 420px; margin: 0 auto;
-    background: var(--volt); color: #14172B;
-    font-weight: 700; font-size: 24px; text-decoration: none;
-    padding: 20px 24px; border-radius: 999px;
-    box-shadow: 0 6px 24px rgba(200, 246, 90, 0.25);
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    width: 100%; max-width: 420px; height: 56px; margin: 0 auto;
+    background: #D9FF7A; color: #14213D;
+    font-weight: 700; font-size: 20px; text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(10, 20, 48, 0.18);
   }
   .download:active { transform: scale(0.98); }
-  .download svg { width: 28px; height: 28px; flex: none; }
-  .meta { color: #A3A8C3; font-size: 15px; margin-top: 12px; }
+  .download svg { width: 22px; height: 22px; flex: none; }
+  .meta { color: #F2F7FF; font-size: 15px; margin-top: 12px; }
   main { max-width: 560px; margin: 0 auto; padding: 24px 16px 48px; }
   .card {
     background: var(--card); border-radius: 24px;
@@ -146,9 +147,7 @@
 </head>
 <body>
   <header class="hero">
-    <div class="mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="#14172B"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
-    </div>
+    <img class="mark" src="img/icon.png" width="72" height="72" alt="SnapGrab আইকন">
     <h1>SnapGrab</h1>
     <p class="tagline">YouTube, Facebook, Instagram, TikTok আর X থেকে ভিডিও ও অডিও (MP3) ডাউনলোড</p>
 
